@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+ <html>
+    <head>
+     <meta content="text/html">
+       <title> Лабораторная 4.2 (Вариант 2) </title>
+       <link rel="stylesheet" href="/style.CSS">
+    </head>
+    <body>
+     <script>
+       let mass= [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1];
+       mass.forEach((item, index, mass) =>{
+       let a= Math.round(Math.random()*30);
+       mass.splice(index,1,(item*a)); });
+       document.write(mass); 
+       let a = mass[1]; //пункт 1
+       for(let i=0;i<15;i++)
+       {if (mass[i]<a){ a = mass[i]; }}
+       document.write("<p>");
+       let b=mass.indexOf(a);
+       let c = mass[b-1];
+       mass.slice(b-1,1,0);
+       document.write("min: ", a, " index: ", b, " before: ", c);
+       mass[b-1]=a;
+       mass[b]=c;
+       document.write("<p>");
+       document.write(mass); //пункт 2
+     </script>
+    </body>
+ </html>

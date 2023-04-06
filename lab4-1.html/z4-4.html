@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <title>Лабораторная 4.4</title>
+                <style>
+
+                </style>
+        </head>
+            <body>
+                <script>
+                    "use strict";
+                    var fruits = [" apple", " pineapple", " mango", " melon", " grape"];
+                    var citrus = [" orange", " lemon", " lime"];
+                    document.write("A. " + fruits + "<p>"); //пункт а
+                    document.write("Б. " + citrus + "<p>"); //пункт б
+                    fruits.push(...citrus); 
+                    document.write("B. " + fruits + "<p>"); //пункт в
+                    fruits.splice(3, 0, " pear", " cherry", " plum", " raspberry", " strawberry");
+                    document.write("Г. " + fruits + "<p>"); //пункт г
+                    fruits.splice(-3);
+                    document.write("Д. " + fruits + "<p>");  //пункт д
+                    fruits.sort();           
+                    document.write("Е. " + fruits + "<p>");  //пункт е
+                    fruits.reverse();    
+                    document.write("Д. " + fruits + "<p>");  //пункт ж
+                    fruits.sort(function(a, b){return a.length - b.length;});
+                    document.write("З. " + fruits + "<p>"); //пункт з
+                </script>
+            </body>
+    </html>

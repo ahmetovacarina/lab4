@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+ <html>
+    <head>
+     <meta content="text/html">
+       <title> Лабораторная 4.3</title>
+       <link rel="stylesheet" href="/style.CSS">
+    </head>
+    <body>
+     <script>
+       let d=parseFloat(prompt("Введите значение D меньше которых должны быть элементы",""));
+       let c=parseFloat(prompt("Введите значение C больше которых должны быть элементы",""));
+       
+       let mass= [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1];
+       mass.forEach((item, index, mass) =>{
+       let a= Math.round(Math.random()*100);
+       mass.splice(index,1,(item*a));});
+       document.write(mass); let b=0;
+          for(let i=0;i<15;i++)
+          {if (mass[i]<d) { b=b+mass[i]; } }
+      document.writeln("<p>");
+       let n=0;
+       for(let i=0;i<15;i++)
+       {if (mass[i]>d){n=n+mass[i];}}
+       
+       let t=Math.round((mass.length/2));
+      
+       let res= t+b+n;
+       document.writeln("<p>");
+       document.writeln(res,);
+     </script>
+    </body>
+ </html>

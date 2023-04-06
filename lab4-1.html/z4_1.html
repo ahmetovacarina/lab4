@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+ <html>
+    <head>
+     <meta content="text/html">
+       <title>Лабораторная 4.1</title>
+       <link rel="stylesheet" href="/style.CSS">
+    </head>
+    <body>
+     <script>
+       let treug = [1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9 , 10 ];
+       treug.forEach((item, index, treug) =>{
+       treug.splice(index,1,(item*(item + 1)/2));});
+       document.write("1. " + treug + "<p>") //пункт 1
+       let kvd=[1,2,3,4,5,6,7,8,9,10];
+       kvd.forEach((item, index, kvd) =>{
+       kvd.splice(index,1,(item*item));});
+       document.write("2.  " + kvd + "<p>") //пункт 2
+       let rez = treug.concat(kvd);
+       document.write("3.  " + rez + "<p>"); //пункт 3
+       let rezsort = rez.sort();
+       document.write("4.  " + rezsort); //пункт 4
+     </script>
+    </body>
+ </html>
